@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Dados"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 10:59:16 "/>
+        <attribute name="created" value="SFA7RUxFQ1RST05JQy1BUlQ7MjAyNS0xMS0xNTsiMTA6NDg6MTggIjsyMzY2"/>
+        <attribute name="edited" value="SFA7RUxFQ1RST05JQy1BUlQ7MjAyNS0xMS0xNTsiMTA6NTk6MTYgIjsxOzI0NzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <assign variable="dado1" expression="Random(6)+1"/>
+            <assign variable="dado2" expression="random(6)+1"/>
+            <output expression="dado1" newline="True"/>
+            <output expression="dado2" newline="True"/>
+            <if expression="dado1 = dado2">
+                <then>
+                    <output expression="&quot;GANADOR&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;GAME OVER&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -23,3 +23,4 @@ Algoritmo Basic_cal
 	mostrar "Multiplication: ", mult;
 	
 FinAlgoritmo
+

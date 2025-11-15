@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Condicional"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-15 10:12:35 "/>
+        <attribute name="created" value="SFA7RUxFQ1RST05JQy1BUlQ7MjAyNS0xMS0xNTsiMDg6NTg6NDIgIjsyMzcx"/>
+        <attribute name="edited" value="SFA7RUxFQ1RST05JQy1BUlQ7MjAyNS0xMS0xNTsiMTA6MTI6MzUgIjsxOzI0NjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="gender" type="String" array="False" size=""/>
+            <assign variable="gender" expression="&quot;&quot;"/>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <assign variable="age" expression="0"/>
+            <output expression="&quot;Enter your age&quot;" newline="True"/>
+            <input variable="age"/>
+            <if expression="age &gt;= 18">
+                <then>
+                    <output expression="&quot;Usuario mayor de edad, puede continuar con el registro&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Usuario es menor de edad&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Write your gender&quot;" newline="True"/>
+            <input variable="gender"/>
+            <if expression="gender = &quot;Femenino&quot;">
+                <then>
+                    <output expression="&quot;Es mujer&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Es hombre&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

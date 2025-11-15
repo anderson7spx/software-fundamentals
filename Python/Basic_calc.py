@@ -8,7 +8,7 @@
 	#1.Definir variables o constante, no necesario.
 
 #2.Inicializar variables o constantes
-num1 = 10
+num1 =  10
 num2 = 3
 #3.Process 
 add = num1 + num2

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Rolling _the_dice"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-19 11:14:51 "/>
+        <attribute name="created" value="SFA7RUxFQ1RST05JQy1BUlQ7MjAyNS0xMS0xOTsiMTA6Mjc6MDggIjsyMzY2"/>
+        <attribute name="edited" value="SFA7RUxFQ1RST05JQy1BUlQ7MjAyNS0xMS0xOTsiMTE6MTQ6NTEgIjsxOzI0Njk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <assign variable="dado1" expression="random(6)+1"/>
+            <assign variable="dado2" expression="random(6)+1"/>
+            <output expression="&quot;Die 1= &quot; &amp;  dado1" newline="True"/>
+            <if expression="dado1 % 2 = 0">
+                <then>
+                    <output expression="&quot;Die 1 is even.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Die 1 is odd.&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Die 2= &quot; &amp;  dado2" newline="True"/>
+            <if expression="dado2 % 2 = 0">
+                <then>
+                    <output expression="&quot;Die 2 is even.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Die 2 is odd.&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="dado1 = dado2">
+                <then>
+                    <output expression="&quot;YOU WIN&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;GAME OVER&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

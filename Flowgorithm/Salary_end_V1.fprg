@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Salary_end_V1"/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-19 08:42:18 "/>
+        <attribute name="created" value="SFA7RUxFQ1RST05JQy1BUlQ7MjAyNS0xMS0xOTsiMDc6MTg6MDkgIjsyMzcz"/>
+        <attribute name="edited" value="SFA7RUxFQ1RST05JQy1BUlQ7MjAyNS0xMS0xOTsiMDg6NDI6MTggIjsxOzI0Nzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="identification" type="String" array="False" size=""/>
+            <declare name="names" type="String" array="False" size=""/>
+            <declare name="lastNames" type="String" array="False" size=""/>
+            <declare name="gender" type="String" array="False" size=""/>
+            <declare name="yearofBirth" type="Integer" array="False" size=""/>
+            <declare name="address" type="String" array="False" size=""/>
+            <declare name="telephone" type="Real" array="False" size=""/>
+            <declare name="salary" type="Real" array="False" size=""/>
+            <declare name="add" type="Real" array="False" size=""/>
+            <declare name="end" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter identification type CC, PS, CE o CI&quot;" newline="True"/>
+            <input variable="identification"/>
+            <output expression="&quot;Enter names&quot;" newline="True"/>
+            <input variable="names"/>
+            <output expression="&quot;Enter last names&quot;" newline="True"/>
+            <input variable="lastNames"/>
+            <output expression="&quot;Enter gender (Man  = M or woman = W)&quot;" newline="True"/>
+            <input variable="gender"/>
+            <output expression="&quot;Enter year of birth (AAAA)&quot;" newline="True"/>
+            <input variable="yearofBirth"/>
+            <output expression="&quot;Enter Address&quot;" newline="True"/>
+            <input variable="address"/>
+            <output expression="&quot;Enter telephone&quot;" newline="True"/>
+            <input variable="telephone"/>
+            <output expression="&quot;Enter salary (Do not include . - ,)&quot;" newline="True"/>
+            <input variable="salary"/>
+            <if expression="salary &lt;= 1200000">
+                <then>
+                    <if expression="gender = &quot;W&quot;">
+                        <then>
+                            <assign variable="add" expression="salary * 0.10"/>
+                            <assign variable="end" expression="add + salary"/>
+                            <output expression="&quot;Dear Sir or Madam, &quot; &amp; names &amp;&quot; &quot;&amp; lastNames &amp; &quot; Your salary will be = $&quot; &amp; end" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="add" expression="salary * 0.08"/>
+                            <assign variable="end" expression="add + salary"/>
+                            <output expression="&quot;Dear Sir or Madam, &quot; &amp; names &amp;&quot; &quot;&amp; lastNames &amp; &quot; Your salary will be = $&quot; &amp; end" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="salary &lt; 2000000">
+                        <then>
+                            <assign variable="add" expression="salary * 0.05"/>
+                            <assign variable="end" expression="add + salary"/>
+                            <output expression="&quot;Dear Sir or Madam, &quot; &amp; names &amp;&quot; &quot;&amp; lastNames &amp; &quot; Your salary will be = $&quot; &amp; end" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="salary &gt;= 2000000">
+                                <then>
+                                    <if expression="gender = &quot;W&quot;">
+                                        <then>
+                                            <assign variable="add" expression="salary * 0.03"/>
+                                            <assign variable="end" expression="add + salary"/>
+                                            <output expression="&quot;Dear Sir or Madam, &quot; &amp; names &amp;&quot; &quot;&amp; lastNames &amp; &quot; Your salary will be = $&quot; &amp; end" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="add" expression="salary * 0.025"/>
+                                            <assign variable="end" expression="add + salary"/>
+                                            <output expression="&quot;Dear Sir or Madam, &quot; &amp; names &amp;&quot; &quot;&amp; lastNames &amp; &quot; Your salary will be = $&quot; &amp; end" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Dear Sir or Madam, &quot; &amp; names &amp;&quot; &quot;&amp; lastNames &amp; &quot; Your salary will be = $&quot; &amp; salary" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="EndSalary" type="Real" variable="">
+        <parameters/>
+        <body/>
+    </function>
+</flowgorithm>
